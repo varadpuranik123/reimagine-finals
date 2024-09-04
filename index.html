@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLY DEV</title>
+</head>
+<body class="w-full h-full bg-[#121212] font-satoshi text-[#f2f2f2]">
+
+    <nav id="nav" class="w-full z-[99] px-10 py-6 fixed justify-between items-center flex ">
+        <div id="logo">
+            <img src="assets/adobe logo.svg" alt="" class="w-full h-8">
+        </div>
+        <div class="flex gap-x-6 font-satoshi-medium items-center ">
+            <p class=" cursor-pointer hover:opacity-80 transition duration-300">Home</p>
+            <p class=" cursor-pointer hover:opacity-80 transition duration-300">About</p>
+            <p class=" cursor-pointer hover:opacity-80 transition duration-300">Try New Products</p>
+            <button class="bg-blue-500 px-6 py-1 rounded-md hover:opacity-80 transition duration-300">login</button>
+        </div>
+    </nav>
+
+    <div id="page1" class="relative w-full h-[160vh] flex flex-col text-center items-center justify-center">
+       
+        <div id="timg1" class="absolute p-4 top-[15%] left-10 bg-white/10 z-[-1]  backdrop-blur-sm rounded-2xl rotate-[12deg]">
+            <img src="assets/image 3.png" alt="" class="w-64 object-cover rounded-lg">
+        </div>
+        <div id="timg2" class="absolute p-4 top-[25%] right-16 bg-white/10 z-[-1] backdrop-blur-sm rounded-2xl -rotate-[12deg]">
+            <img src="assets/image 4.png" alt="" class="w-56 object-cover rounded-lg">
+        </div>
+       
+       
+        <div class="above-heading mb-3 font-satoshi-medium rounded-md border flex items-center justify-center space-x-3 border-[#f2f2f2] py-1 px-5">
+            <div class="lg:w-3 lg:h-3 w-2.5 h-2.5 rounded-full bg-gradient-to-br from-blue-500 via-yellow-500 to-red-500 "></div>
+            <p class="lg:text-lg text-xs ">Over 100m+ images generated with generative AI </p>
+        </div>
+        <div id="heading" class="text-6xl overflow-hidden capitalize font-satoshi-medium ">
+            <h1 class="leading-[1.1] ">Create innovative designs </h1>
+            <h1 class="leading-[1.1] py-1 ">using generative AI</h1>
+        </div>
+        <div id="sub-heading" class="text-lg mt-3 max-w-[48rem] text-zinc-500">
+            Firefly models and services power generative AI features in Adobe creative apps. Learn about the latest features in Photoshop, Illustrator, Lightroom, and the Firefly web app.
+        </div>
+
+        <div class="p-4 bg-white/10 mt-12 rounded-2xl backdrop-blur-sm">
+            <video class="video rounded-lg" src="assets/landing page video.mp4" muted loop autoplay></video>
+        </div>
+    </div>
+
+    <div id="page2" class="w-full h-full flex flex-col relative ">
+        <div class="w-full h-screen flex  flex-row">
+            <div class="w-full h-full  flex flex-col">
+                <div class="w-full h-[70%]  flex items-center justify-center relative">
+                    <img src="assets/A-what-is-a-flower 1.png" alt=" " class="w-1/2 mt-20 -scale-x-100 ">
+                    <div id="border" class="w-72 h-72 border-4 border-dotted rounded-full absolute left-[33%] top-[40%]"></div>
+                    <img src="assets/bee 1.png" alt="" class="bee blur-3xl w-80 opacity-0 absolute left-[33%] rotate-12 top-[40%]">
+                </div>
+                <div class="w-full h-[30%] flex justify-center gap-x-4 items-center ">
+                    <div id="inputtag" class="w-60 h-fit p-2 border border-zinc-600 bg-[#333] ">
+                        <div class=" w-full h-full border border-zinc-800 bg-[#222] p-1">
+                            <div class="text-zinc-100 "> Add an bee</div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <button id="genbtn" class="p-4 btn-donate bg-blue-500 font-satoshi-medium px-6 py-3 rounded-md hover:opacity-80 transition  duration-300">Generate</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="page3" class="w-full h-full flex flex-col overflow-hidden">
+        <!-- remember to flex -->
+        <div id="text-prompt" class="w-full flex h-screen flex-col items-center justify-center">
+            <div id="heading3" class=" text-center text-9xl font-satoshi-medium text-transparent bg-clip-text bg-gradient-to-b py-4 from-[#f2f2f2] via-[#f2f2f2] to-[#f2f2f2]/20 ">
+                Text To Image
+            </div>
+            <div class="flex flex-col mt-20 w-[60%] gap-y-1">
+                <p id="prmp" class="text-zinc-400 text-lg ml-4">Prompt....</p>
+                <p id="prmp" class="text-zinc-200 text-lg px-8 py-6 bg-zinc-900 rounded-full">Create a retro-style postcard illustration featuring a woman from the 1950s enjoying an ice cream cone. </p>
+                <div class="w-full flex justify-center mt-10">
+                    <button id="btnn" class="bg-blue-500 btn-donate z-[5] text-xl font-satoshi-medium px-8 py-4 w-fit rounded-md ">Generate</button>   
+                </div>
+            </div>
+        </div>
+        <div id="imgdiv" class="w-full opacity-0  absolute h-[135vh] flex flex-col items-center justify-center">
+            <div id="heading" class=" text-center flex flex-col items-center font-satoshi-medium  ">
+                <p class="text-transparent text-9xl tracking-tighter bg-clip-text bg-gradient-to-b py-4 px-1 from-[#f2f2f2] via-[#f2f2f2] to-[#f2f2f2]/20"> Generating Images</p>
+                <p class="text-lg mt-2 tracking-tight max-w-[50rem] text-zinc-500">With the new Firefly Image 3 Model, you can create higher-quality images with better composition, photorealistic details, and improved mood and lighting.</p>
+            </div>
+            <div id="imggrid" class="w-[80%] mt-10 h-[70%] flex flex-col gap-y-4">
+                <div class="flex w-full h-[50%] gap-x-4">
+                    <img src="assets/image 6.png" alt="" class="w-full hover:scale-95 transition duration-300 ease-in-out object-cover rounded-3xl">
+                    <img src="assets/image 8.png" alt="" class="w-full hover:scale-95 transition duration-300 ease-in-out object-cover rounded-3xl">
+                </div>
+                <div class="w-full h-[50%] flex">
+                    <img src="assets/image 14.png" alt="" class="w-full hover:scale-95 transition duration-300 ease-in-out object-cover rounded-3xl">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page4" class="w-full h-full flex flex-col overflow-hidden">
+        <div class="w-full h-[140vh] ">
+            <div id="heading4" class="mt-40 translate-y-[60%] text-center flex flex-col items-center font-satoshi-medium  ">
+                <p class="text-transparent text-9xl tracking-tighter bg-clip-text bg-gradient-to-b py-4 px-1 from-[#f2f2f2] via-[#f2f2f2] to-[#f2f2f2]/20"> Generating Shape Fill</p>
+                <p class="text-lg mt-2 tracking-tight max-w-[50rem] text-zinc-500">With new Generative Shape Fill, you can quickly fill your vector outline and explore a variety of options that match the look and feel of your own artwork.</p>
+            </div>
+            <div class=" relative w-full h-[110vh] flex flex-col items-center justify-center">
+                <div class="absolute gap-y-4 flex flex-col">
+                    <div class="">
+                        <img src="assets/image 23 (1).png" alt="" class="harinimg1 w-96 rounded-2xl">
+                    </div>
+                    <div class="w-full h-[30%] flex justify-center gap-x-4 items-center ">
+                        <div id="inputtag" class="w-60 h-fit p-2 border border-zinc-600 bg-[#333] ">
+                            <div class=" w-full h-full border border-zinc-800 bg-[#222] p-1">
+                                <div class="text-zinc-100 "> fill images using gen AI</div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <button id="genbtnn" class="p-4 z-[50] btn-donate bg-blue-500 font-satoshi-medium px-6 py-3 rounded-md hover:opacity-80 transition  duration-300">Generate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute  z-[-1]  ">
+                    <div class="">
+                        <img src="assets/image 24.png" alt="" class="harinimg2 opacity-0 w-[30rem] rounded-2xl">
+                    </div>
+                </div>
+                <div id="finalharin" class="flex w-full h-[50%] opacity-0 z-[-1]">
+                    <div class="w-[50%] h-full flex items-center pl-40 justify-center">
+                        <img src="assets/harin final.svg" class="w-96" alt="">
+                    </div>
+                    <div class="w-[50%] h-full flex flex-col pl-20 justify-center gap-y-6">
+                        <div class="heading text-5xl font-satoshi-medium">
+                            Graphics at the <br> speed of now.
+                        </div>
+                        <div class="">
+                            <p class="text-zinc-500 max-w-[25rem]">
+                                Go from idea to design faster with the help of generative AI in Illustrator. Discover Generative Shape Fill, Text to Pattern, and more, powered by the latest Firefly Vector Model.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="page5" class="w-full h-full flex flex-col items-center">
+        <div id="heading5" class="mt-40 text-center flex flex-col items-center font-satoshi-medium  ">
+            <p class="text-transparent text-9xl tracking-tighter bg-clip-text bg-gradient-to-b px-1 from-[#f2f2f2] via-[#f2f2f2] to-[#f2f2f2]/20"> Generative Remove</p>
+            <p class="text-lg mt-2 tracking-tight max-w-[50rem] text-zinc-500">See everything you want and nothing you don&apos;t. It&apos;s easy to remove distractions from the background with Generative Remove powered by Firefly generative AI.</p>
+        </div>
+        <div class="w-full h-[80vh] flex flex-col items-center">
+            <div class="p-4 bg-white/10 mt-12 w-fit rounded-2xl backdrop-blur-sm">
+                <video class="removid rounded-lg w-[40rem]" src="assets/gen remove video.mp4" muted loop autoplay></video>
+            </div>
+        </div>
+    </div>
+
+    <div id="heading-new" class=".page6heading mt-20 text-center flex flex-col items-center font-satoshi-medium  ">
+        <p class="text-transparent text-9xl tracking-tighter bg-clip-text bg-gradient-to-b px-1 from-[#f2f2f2] via-[#f2f2f2] to-[#f2f2f2]/20">Generative AI Inside your Adobe apps</p>
+        <p class="text-lg mt-2 tracking-tight max-w-[60rem] text-zinc-500">Make amazing transformations in a snap with new features. In just a few words, you can create images, add or remove objects, fill in or expand images, and generate custom graphics and seamless patterns.</p>
+    </div>
+
+
+    <div id="page60" class="w-full h-full flex flex-col items-center">
+        
+        <div class="w-full h-screen flex">
+            <div id="appsection" class="w-full flex-shrink-0 h-screen flex items-center">
+                <div class="w-[50%] h-full flex items-center justify-end">
+                    <img src="assets/Adobe Photoshop.svg" alt="">
+                </div>
+                <div class="w-[50%] h-[50%] flex flex-col justify-center items-start gap-y-6 ">
+                    <h1 class="text-6xl font-satoshi-medium"> <span class="w-40 h-40 bg-[#03a9f4]"></span> Photoshop</h1>
+                    <p class="text-lg text-zinc-500 max-w-[29rem]">Create gorgeous images, rich graphics, and incredible art with Firefly-powered features like Text to Image, Generative Fill, and Generative Expand.</p>
+                    <button class="bg-blue-500 text-sm font-satoshi-medium px-6 py-2 w-fit rounded-md hover:opacity-80 transition duration-300">Learn more</button>   
+                </div>
+            </div>
+            <div id="appsection" class="w-full flex-shrink-0 h-screen flex items-center">
+                <div class="w-[50%] h-full flex items-center justify-end">
+                    <img src="assets/Adobe Illustrator.svg" alt="">
+                </div>
+                <div class="w-[50%] h-[50%] flex flex-col justify-center items-start gap-y-6 ">
+                    <h1 class="text-6xl font-satoshi-medium">Illustrator</h1>
+                    <p class="text-lg text-zinc-500 max-w-[29rem]">Create vector graphics that match the look of your own artwork with Generative Shape Fill and make new patterns and apply them anywhere with Text to Pattern.</p>
+                    <button class="bg-blue-500 text-sm font-satoshi-medium px-6 py-2 w-fit rounded-md hover:opacity-80 transition duration-300">Learn more</button>   
+                </div>
+            </div>
+            <div id="appsection" class="w-full flex-shrink-0 h-screen flex items-center">
+                <div class="w-[50%] h-full flex items-center justify-end">
+                    <img src="assets/Adobe Indesign.svg" alt="">
+                </div>
+                <div class="w-[50%] h-[50%] flex flex-col justify-center items-start gap-y-6 ">
+                    <h1 class="text-6xl font-satoshi-medium">Indesign</h1>
+                    <p class="text-lg text-zinc-500 max-w-[29rem]">Create and publish brochures, digital magazines, eBooks, posters, and presentations. Generate images with Text to Image, powered by Firefly models designed to be commercially safe.</p>
+                    <button class="bg-blue-500 text-sm font-satoshi-medium px-6 py-2 w-fit rounded-md hover:opacity-80 transition duration-300">Learn more</button>   
+                </div>
+            </div>
+            <div id="appsection" class="w-full flex-shrink-0 h-screen flex items-center">
+                <div class="w-[50%] h-full flex items-center justify-end">
+                    <img src="assets/Adobe Lightroom.svg" alt="">
+                </div>
+                <div class="w-[50%] h-[50%] flex flex-col justify-center items-start gap-y-6 ">
+                    <h1 class="text-6xl font-satoshi-medium">Lightroom</h1>
+                    <p class="text-lg text-zinc-500 max-w-[29rem]">Create photos that look exactly the way you want, wherever you are. Remove anything in a click with new Generative Remove.</p>
+                    <button class="bg-blue-500 text-sm font-satoshi-medium px-6 py-2 w-fit rounded-md hover:opacity-80 transition duration-300">Learn more</button>   
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="page6" class="w-full relative h-fit flex flex-col">
+        <div class="w-full h-screen flex flex-col justify-center gap-y-4 items-center">
+            <h1 id="heading6" class="text-8xl font-satoshi-medium tracking-tight">
+                Firefly in the NEWS
+            </h1>
+            <p id="heading6" class="text-xl text-zinc-500 mt-4 max-w-[28rem] dont-satoshi-medium text-center">We&apos;re always developing and improving our generative AI tools. Explore the latest news and announcements.</p>
+            <div class="w-1/2 h-1/2 ">
+                <img src="assets/bird image.webp" alt="" class="rounded-xl birdimg scale-50">
+            </div>
+        </div> 
+    </div>
+
+    <div id="page7" class="w-full h-[100vh] flex flex-col overflow-hidden">
+        
+            <div id="heading7" class="mt-20 text-center flex flex-col items-center font-satoshi-medium  ">
+                <p class="text-transparent text-9xl tracking-tighter bg-clip-text bg-gradient-to-b px-1 from-[#f2f2f2] via-[#f2f2f2] to-[#f2f2f2]/20">Creators first</p>
+                <p class="text-lg mt-2 tracking-tight max-w-[60rem] text-zinc-500">Adobe is committed to developing generative AI responsibly, with creators at the center. Our mission is to give creators every advantage — not just creatively, but practically. As Adobe Firefly evolves, we&apos;ll continue to work closely with the creative community to build technology that supports and improves the creative process..</p>
+            </div>
+        
+        <div class="flex ">
+            <div class="w-full h-[40%] flex flex-col items-center mt-10">
+                <div class="w-full h-1/2 flex items-center justify-center">
+                    <img id="imgg1" src="assets/page71.svg" alt="" class="w-fit h-full hover:scale-110 transition duration-300">
+                </div>
+                <div class="w-full h-1/2 flex items-center justify-center">
+                    <img id="imgg2" src="assets/page72.svg" alt="" class="w-1/4 h-full hover:scale-110 transition duration-300 ">
+                    <img id="imgg3" src="assets/page73.svg" alt="" class="w-1/4 h-full hover:scale-[1.6] transition duration-300 scale-150 ">
+                </div>
+            </div>
+            <div class="w-full relative h-[40%] mt-10 flex font-satoshi-medium flex-col items-start justify-center">
+                <div id="imgcont1" class="gap-y-4  flex flex-col">
+                    <h1 class="text-3xl">Enhance the creative process</h1>
+                    <p class=" text-[16px] text-zinc-500 max-w-[36rem]">The vision for Adobe Firefly is to help people expand upon their natural creativity. As both a product and an embedded model inside Adobe apps, Firefly offers generative AI tools made specifically for creative needs, use cases, and workflows.</p>
+                </div>   
+                <div id="imgcont2" class="gap-y-4 opacity-0 flex flex-col absolute ">
+                    <h1 class="text-3xl">Give creators practical advantages</h1>
+                    <p class=" text-[16px] text-zinc-500 max-w-[36rem]">Firefly is designed to be safe for commercial use. The current Firefly generative AI models were trained on a dataset of licensed content, such as Adobe Stock, and public domain content where copyright has expired. To ensure that creators can benefit from generative AI.</p>
+                </div> 
+                <div id="imgcont3" class="gap-y-4 opacity-0 flex flex-col absolute ">
+                    <h1 class="text-3xl">Set the standard for responsibility.</h1>
+                    <p class=" text-[16px] text-zinc-500 max-w-[36rem]">Through efforts like the Content Authenticity Initiative and the Coalition for Content Provenance and Authenticity, we’re standing up for accountability, responsibility, and transparency in generative AI.</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div id="page8" class="w-full h-[120vh]">
+        <div id="heading8" class="mt-20 text-center flex flex-col items-center font-satoshi-medium  ">
+            <p class="text-transparent text-9xl tracking-tighter bg-clip-text bg-gradient-to-b px-1 from-[#f2f2f2] via-[#f2f2f2] to-[#f2f2f2]/20">FAQ</p>
+            <p class="text-lg mt-2 tracking-tight max-w-[60rem] text-zinc-500">If you have any question we have answer to that.</p>
+        </div>
+
+        <div id="faqgrid" class="w-full h-screen  grid grid-cols-3 mt-12">
+            <div class="w-full h-full flex flex-col items-center justify-center p-4">
+                <div class="w-[90%] h-[80%] flex flex-col  items-start justify-center gap-y-6">
+                    <h1 class="text-3xl">What is Adobe Firefly?</h1>
+                    <p class="text-zinc-500">Adobe Firefly is family of creative generative AI models. Features powered by Firefly are embedded in Adobes flagship apps and Adobe Stock.
+                        Firefly is the natural extension of the technology Adobe has produced over the past 40 years, driven by the belief that people should be empowered to bring their ideas into the world precisely as they imagine them</p>
+                </div>
+            </div>
+            <div class="w-full h-full flex flex-col items-center justify-center p-4">
+                <div class="w-[90%] h-[80%] flex flex-col  items-start justify-center gap-y-6">
+                    <h1 class="text-3xl">What is generative AI</h1>
+                    <p class="text-zinc-500">Generative AI is a type of artificial intelligence that can translate text and other inputs into extraordinary results. While the conversation around this technology has centred on AI image and art generation, generative AI can do much more than generate static images from text prompts. With a few simple words and the right AI generator, anyone can create videos</p>
+                </div>
+            </div>
+            <div class="w-full h-full flex flex-col items-center justify-center p-4">
+                <div class="w-[90%] h-[80%] flex flex-col  items-start justify-center gap-y-6">
+                    <h1 class="text-3xl">How do AI art generators work?</h1>
+                    <p class="text-zinc-500">As a type of generative AI technology, AI art generators work similarly to other types of artificial intelligence, which use a machine learning model and large datasets to be able to produce a specific type of result. With generative AI, anybody can use everyday language and other inputs to produce images, videos, documents, digital experiences and more. </p>
+                </div>
+            </div>
+            <div class="w-full h-full flex flex-col items-center justify-center p-4">
+                <div class="w-[90%] h-[80%] flex flex-col  items-start justify-center gap-y-6">
+                    <h1 class="text-3xl">Which creative cloud apps have Firefly?</h1>
+                    <p class="text-zinc-500">We are bringing Adobe Firefly to Creative Cloud apps. Features powered by Firefly can currently be found inside Photoshop, Illustrator, Adobe Express, Substance 3D, InDesign, Lightroom and Adobe Stock.</p>
+                </div>
+            </div>
+            <div class="w-full h-full  flex flex-col items-center justify-center p-4">
+                <div class="w-[90%] h-[80%] flex flex-col  items-start justify-center gap-y-6">
+                    <h1 class="text-3xl">What is Adobe firefly premium plan?</h1>
+                    <p class="text-zinc-500">The Firefly Premium plan opens up creativity to anyone at any design skill level. With Firefly, anyone can use everyday language to get extraordinary results with generative AI. Find out more or sign up for the Firefly Premium plan.</p>
+                </div>
+            </div>
+            <div class="w-full h-full  flex flex-col items-center justify-center p-4">
+                <div class="w-[90%] h-[80%] flex flex-col  items-start justify-center gap-y-6">
+                    <h1 class="text-3xl">What are generative credits?</h1>
+                    <p class="text-zinc-500">Your Creative Cloud, Adobe Express, Firefly or Adobe Stock subscription now includes monthly generative credits that give you access to content creation features powered by Firefly. Find out more about generative credits.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page9" class="footer w-full h-full flex flex-col justify-center pt-40 overflow-hidden">
+        <div id="animatediv" class="w-full lg:h-[40vh] flex lg:flex-row flex-col pl-4 gap-y-10 ">
+            <div class="lg:w-[20%] w-full h-full flex flex-col lg:px-10 ">
+                <img src="assets/adobe logo.svg" alt="" class="w-40 bg-[#1c1c1b] rounded-md shadow-md px-4 py-4">
+            </div>
+            <div class="lg:w-[25%] w-full h-full flex flex-col gap-y-2 ">
+                <h4 class="text-2xl text-[#eb1000] font-satoshi-bold">Quick Links</h4>
+                <div class="">
+                    <div class="w-fit h-fit relative group overflow-hidden ">
+                        <p class="cursor-pointer text-lg group-hover:-translate-y-[100%] transition-all  ease-in-out duration-150 font-satoshi-medium text-[#777]">Home</p>
+                        <p class="absolute cursor-pointer group-hover:-translate-y-[100%] transition-all ease-in-out duration-150 text-lg font-satoshi-medium">Home</p>
+                    </div>
+                    <div class="w-fit h-fit relative group overflow-hidden ">
+                        <p class="cursor-pointer text-lg group-hover:-translate-y-[100%] transition-all  ease-in-out duration-150 font-satoshi-medium text-[#777]">About</p>
+                        <p class="absolute cursor-pointer group-hover:-translate-y-[100%] transition-all ease-in-out duration-150 text-lg font-satoshi-medium">About</p>
+                    </div>
+                    <div class="w-fit h-fit relative group overflow-hidden ">
+                        <p class="cursor-pointer text-lg group-hover:-translate-y-[100%] transition-all  ease-in-out duration-150 font-satoshi-medium text-[#777]">Blogs</p>
+                        <p class="absolute cursor-pointer group-hover:-translate-y-[100%] transition-all ease-in-out duration-150 text-lg font-satoshi-medium">Blogs</p>
+                    </div>
+                    <div class="w-fit h-fit relative group overflow-hidden ">
+                        <p class="cursor-pointer text-lg group-hover:-translate-y-[100%] transition-all  ease-in-out duration-150 font-satoshi-medium text-[#777]">FAQs</p>
+                        <p class="absolute cursor-pointer group-hover:-translate-y-[100%] transition-all ease-in-out duration-150 text-lg font-satoshi-medium">FAQs</p>
+                    </div>
+                    <div class="w-fit h-fit relative group overflow-hidden ">
+                        <p class="cursor-pointer text-lg group-hover:-translate-y-[100%] transition-all  ease-in-out duration-150 font-satoshi-medium text-[#777]">Careers</p>
+                        <p class="absolute cursor-pointer group-hover:-translate-y-[100%] transition-all ease-in-out duration-150 text-lg font-satoshi-medium">Careers</p>
+                    </div>
+                    <div class="w-fit h-fit relative group overflow-hidden ">
+                        <p class="cursor-pointer text-lg group-hover:-translate-y-[100%] transition-all  ease-in-out duration-150 font-satoshi-medium text-[#777]">Inverstors</p>
+                        <p class="absolute cursor-pointer group-hover:-translate-y-[100%] transition-all ease-in-out duration-150 text-lg font-satoshi-medium">Inverstors</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-[25%] w-full h-full flex flex-col gap-y-2 ">
+                    <h4 class="text-2xl text-[#eb1000] font-satoshi-bold">More Links</h4>
+                    <div class="">
+                        <div class="w-fit h-fit relative group overflow-hidden ">
+                            <p class="cursor-pointer text-lg group-hover:-translate-y-[100%] transition-all  ease-in-out duration-150 font-satoshi-medium text-[#777]">Login</p>
+                            <p class="absolute cursor-pointer group-hover:-translate-y-[100%] transition-all ease-in-out duration-150 text-lg font-satoshi-medium">Login</p>
+                        </div>
+                        <div class="w-fit h-fit relative group overflow-hidden ">
+                            <p class="cursor-pointer text-lg group-hover:-translate-y-[100%] transition-all  ease-in-out duration-150 font-satoshi-medium text-[#777]">Contact Us</p>
+                            <p class="absolute cursor-pointer group-hover:-translate-y-[100%] transition-all ease-in-out duration-150 text-lg font-satoshi-medium">Contact Us</p>
+                        </div>
+                        <div class="w-fit h-fit relative group overflow-hidden ">
+                            <p class="cursor-pointer text-lg group-hover:-translate-y-[100%] transition-all  ease-in-out duration-150 font-satoshi-medium text-[#777]">Privacy</p>
+                            <p class="absolute cursor-pointer group-hover:-translate-y-[100%] transition-all ease-in-out duration-150 text-lg font-satoshi-medium">Privacy</p>
+                        </div>
+                        <div class="w-fit h-fit relative group overflow-hidden ">
+                            <p class="cursor-pointer text-lg group-hover:-translate-y-[100%] transition-all  ease-in-out duration-150 font-satoshi-medium text-[#777]">Policy</p>
+                            <p class="absolute cursor-pointer group-hover:-translate-y-[100%] transition-all ease-in-out duration-150 text-lg font-satoshi-medium">Policy</p>
+                        </div>
+                        <div class="w-fit h-fit relative group overflow-hidden ">
+                            <p class="cursor-pointer text-lg group-hover:-translate-y-[100%] transition-all  ease-in-out duration-150 font-satoshi-medium text-[#777]">Terms & Conditions</p>
+                            <p class="absolute cursor-pointer group-hover:-translate-y-[100%] transition-all ease-in-out duration-150 text-lg font-satoshi-medium">Terms & Conditions</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="lg:w-[25%] w-full h-full flex flex-col gap-y-4 ">
+                <h4 class="text-2xl text-[#eb1000] font-satoshi-bold">Download App</h4>
+                <div class="">
+                    <div class="w-8 h-8 relative group ">
+                        <img src="assets/android logo.svg" alt="" class="w-full h-full opacity-75 hover:opacity-100 transition duration-200 ease-in-out">
+                    </div>
+                    <div class="w-8 h-8 relative group mt-3 ">
+                        <img src="assets/apple logo.svg" alt="" class="w-full h-full opacity-75 hover:opacity-100 transition duration-200 ease-in-out">
+                    </div>
+                </div>
+        </div>
+            
+        </div>
+        
+        <div id="animatediv" class="w-full h-[30vh] flex items-center justify-center">
+            <h1 class="lg:text-[256px] text-7xl font-satoshi-medium text-[#eb1000] [text-shadow:0px_0px_24px_#eb1000]">
+                Adobe
+            </h1>
+        </div>
+
+    </div>
+
+    
+     
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="script.js"></script>
+    
+</body>
+</html>
